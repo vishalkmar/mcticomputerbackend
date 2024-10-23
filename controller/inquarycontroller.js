@@ -30,8 +30,8 @@ const registerUser = async (req, res) => {
 
       // Mail options
       const mailOptions = {
-          from: email, // sender's email (from request body)
-          to: process.env.MY_EMAIL, // receiver's email
+          from:process.env.MY_EMAIL, // sender's email (from request body)
+          to: email, // receiver's email
           subject: `Regarding this: ${course} course`, // email subject
           html: `
               <p>You have successfully enrolled in our ${course}. Please keep your username and password safe and secure for future references. You will only be able to show and download your course completion certificate using this username and password.</p>
