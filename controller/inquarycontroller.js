@@ -30,7 +30,7 @@ const registerUser = async (req, res) => {
 
       // Mail options
       const mailOptions = {
-          from:process.env.MY_EMAIL, // sender's email (from request body)
+          from:process.env.EMAIL_USER, // sender's email (from request body)
           to: email, // receiver's email
           subject: `Regarding this: ${course} course`, // email subject
           html: `

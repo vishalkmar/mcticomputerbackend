@@ -32,7 +32,7 @@ const sendmail = async (req, res) => {
     // Mail options
     const mailOptions = {
       from: email, // sender's email (from request body)
-      to: process.env.MY_EMAIL, // receiver's email
+      to: process.env.EMAIL_USER, // receiver's email
       subject: subject, // email subject
       html: `
       <p><strong>Name:</strong> ${name}</p>
@@ -86,7 +86,7 @@ const sendEnrollEmail = async (req, res) => {
     // Mail options
     const mailOptionstwo = {
       from: email, // sender's email (from request body)
-      to: process.env.MY_EMAIL, // receiver's email
+      to: process.env.EMAIL_USER, // receiver's email
       subject: "Regarding Course Admission", // email subject
       html: `
       <p><strong>Name:</strong> ${name}</p>
